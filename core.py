@@ -149,11 +149,15 @@ class Server:
                 client.close()
             elif addr[address[0]] >= 4:
                 block.append(address[0])
-                config = open('config.json', 'r')
-                content = config.read()
-                settings = json.loads(content)
-                settings['block'].append(address[0])
-                print(f"{settings['block']}")
+                try:
+                    config = open('config.json', 'r')
+                    content = config.read()
+                    settings = json.loads(content)
+                    settings['block'].append(address[0])
+                    print(f"{settings['block']}")
+                    config.close()
+                except:
+                    pass
                 client.close()
             else:
                 ClientThread(client, address).start()
@@ -217,6 +221,6 @@ if __name__ == '__main__':
     web_thread.daemon = True
     web_thread.start()
     
-    # Запускаем игровой сервер
-    server = Server('0.0.0.0', 9339)
+    # Запускаем игровой сервер на порту 10000 (порт Render)
+    server = Server('0.0.0.0', 10000)
     server.start()
