@@ -39,7 +39,7 @@ def status():
 
 def run_web_server():
     port = int(os.environ.get('PORT', 10000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port, debug=False)
 
 class Server:
     Clients = {"ClientCounts": 0, "Clients": {}}
@@ -54,7 +54,7 @@ class Server:
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.server.bind((self.ip, self.port))
-        print(f'Server | Lobby started! {self.ip}:{self.port}')
+        print(f'Server | Game server started! {self.ip}:{self.port}')
         
         # Создаем директорию если её нет
         if not os.path.exists("database/Player"):
@@ -216,11 +216,12 @@ class ClientThread(Thread):
             self.client.close()
 
 if __name__ == '__main__':
-    # Запускаем HTTP сервер для health check в отдельном потоке
+    # Запускаем HTTP сервер для health check на порту 10000
     web_thread = threading.Thread(target=run_web_server)
     web_thread.daemon = True
     web_thread.start()
     
-    # Запускаем игровой сервер на порту 10000 (порт Render)
-    server = Server('0.0.0.0', 10000)
+    # Запускаем игровой сервер на порту 10001 (или другом свободном порту)
+    GAME_PORT = 10001  # Используем другой порт
+    server = Server('0.0.0.0', GAME_PORT)
     server.start()
