@@ -10,6 +10,8 @@ from Logic.LogicMessageFactory import packets
 from Utils.Config import Config
 from Utils.Helpers import Helpers
 import json
+from flask import Flask
+import threading
 
 def _(*args):
     print('[INFO]', end=' ')
@@ -19,6 +21,25 @@ def _(*args):
 
 addr = {}
 block = []
+
+# Создаем Flask приложение для health check
+app = Flask(__name__)
+
+@app.route('/')
+def health_check():
+    return "Game server is running", 200
+
+@app.route('/status')
+def status():
+    return json.dumps({
+        "status": "online",
+        "players": Server.ThreadCount if 'Server' in globals() else 0,
+        "clients": Server.Clients["ClientCounts"] if 'Server' in globals() else 0
+    }), 200
+
+def run_web_server():
+    port = int(os.environ.get('PORT', 10000))
+    app.run(host='0.0.0.0', port=port)
 
 class Server:
     Clients = {"ClientCounts": 0, "Clients": {}}
@@ -122,11 +143,11 @@ class Server:
                 addr[address[0]] += 1
             else:
                 addr[address[0]] = 0
+            
+            # Убираем iptables, просто блокируем через код
             if address[0] in block:
-                os.system(f"iptables -A INPUT -s {address[0]} -j DROP")
                 client.close()
             elif addr[address[0]] >= 4:
-                os.system(f"iptables -A INPUT -s {address[0]} -j DROP")
                 block.append(address[0])
                 config = open('config.json', 'r')
                 content = config.read()
@@ -175,35 +196,27 @@ class ClientThread(Thread):
                             Server.Clients["ClientCounts"] = Server.ThreadCount
                             self.player.ClientDict = Server.Clients
                 if time.time() - last_packet > 9:
-                    addr[self.address[0]] = 0
-                    del addr[self.address[0]]
+                    if self.address[0] in addr:
+                        del addr[self.address[0]]
                     DataBase.replaceValue(self, 'online', 0)
                     Server.ThreadCount -= 1
                     print(f"Player Online {Server.ThreadCount}")
                     self.client.close()
                     break
-        except ConnectionAbortedError:
-            addr[self.address[0]] = 0
-            del addr[self.address[0]]
-            DataBase.replaceValue(self, 'online', 0)
-            Server.ThreadCount -= 1
-            print(f"Player Online {Server.ThreadCount}")
-            self.client.close()
-        except ConnectionResetError:
-            addr[self.address[0]] = 0
-            del addr[self.address[0]]
-            DataBase.replaceValue(self, 'online', 0)
-            Server.ThreadCount -= 1
-            print(f"Player Online {Server.ThreadCount}")
-            self.client.close()
-        except TimeoutError:
-            addr[self.address[0]] = 0
-            del addr[self.address[0]]
+        except (ConnectionAbortedError, ConnectionResetError, TimeoutError):
+            if self.address[0] in addr:
+                del addr[self.address[0]]
             DataBase.replaceValue(self, 'online', 0)
             Server.ThreadCount -= 1
             print(f"Player Online {Server.ThreadCount}")
             self.client.close()
 
 if __name__ == '__main__':
+    # Запускаем HTTP сервер для health check в отдельном потоке
+    web_thread = threading.Thread(target=run_web_server)
+    web_thread.daemon = True
+    web_thread.start()
+    
+    # Запускаем игровой сервер
     server = Server('0.0.0.0', 9339)
     server.start()
