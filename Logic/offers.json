@@ -1,0 +1,527 @@
+{
+    "0": {
+        "ID": [
+            8,
+            0,
+            0
+        ],
+        "OfferTitle": "daily",
+        "Cost": 130,
+        "OldCost": 0,
+        "Multiplier": [
+            33,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            15,
+            0,
+            0
+        ],
+        "SkinID": [
+            0,
+            0,
+            0
+        ],
+        "WhoBuyed": [
+            977,
+            5392,
+            7185,
+            7666,
+            7235,
+            5971,
+            8073,
+            6953,
+            5916,
+            8155,
+            6586,
+            7413,
+            7817,
+            7981,
+            6059,
+            5739,
+            7685,
+            8335,
+            8255
+        ],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 1,
+        "ShopDisplay": 1
+    },
+    "1": {
+        "ID": [
+            8,
+            0,
+            0
+        ],
+        "OfferTitle": "daily",
+        "Cost": 27,
+        "OldCost": 0,
+        "Multiplier": [
+            25,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            16,
+            0,
+            0
+        ],
+        "SkinID": [
+            0,
+            0,
+            0
+        ],
+        "WhoBuyed": [
+            8096,
+            7729,
+            977,
+            5392,
+            7024,
+            5971,
+            7986,
+            5916,
+            7868,
+            8199,
+            7817,
+            6059,
+            4155,
+            7258,
+            8284,
+            6835,
+            8255,
+            5636
+        ],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 1,
+        "ShopDisplay": 1
+    },
+    "2": {
+        "ID": [
+            8,
+            0,
+            0
+        ],
+        "OfferTitle": "daily",
+        "Cost": 86,
+        "OldCost": 0,
+        "Multiplier": [
+            61,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            31,
+            0,
+            0
+        ],
+        "SkinID": [
+            0,
+            0,
+            0
+        ],
+        "WhoBuyed": [
+            7997,
+            7729,
+            977,
+            5392,
+            7024,
+            8032,
+            7955,
+            5971,
+            8138,
+            8073,
+            7463,
+            5916,
+            7885,
+            7832,
+            7817,
+            8217,
+            8185,
+            8241,
+            6059,
+            7305,
+            8365,
+            8347,
+            5636
+        ],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 1,
+        "ShopDisplay": 1
+    },
+    "3": {
+        "ID": [
+            8,
+            0,
+            0
+        ],
+        "OfferTitle": "daily",
+        "Cost": 130,
+        "OldCost": 0,
+        "Multiplier": [
+            21,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            7,
+            0,
+            0
+        ],
+        "SkinID": [
+            0,
+            0,
+            0
+        ],
+        "WhoBuyed": [
+            7729,
+            977,
+            5392,
+            7024,
+            4496,
+            6586,
+            7955,
+            7235,
+            5971,
+            8019,
+            8138,
+            7463,
+            5916,
+            7413,
+            7868,
+            7817,
+            7981,
+            5905,
+            8050,
+            7986,
+            5368,
+            6059,
+            8258,
+            8091,
+            8259,
+            8255,
+            7258,
+            7835,
+            7305,
+            8063,
+            8365,
+            4385,
+            5636
+        ],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 1,
+        "ShopDisplay": 1
+    },
+    "4": {
+        "ID": [
+            8,
+            0,
+            0
+        ],
+        "OfferTitle": "daily",
+        "Cost": 15,
+        "OldCost": 0,
+        "Multiplier": [
+            36,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            4,
+            0,
+            0
+        ],
+        "SkinID": [
+            0,
+            0,
+            0
+        ],
+        "WhoBuyed": [
+            8092,
+            7729,
+            977,
+            5392,
+            7024,
+            8138,
+            5971,
+            6953,
+            5916,
+            6586,
+            7413,
+            8199,
+            5905,
+            8050,
+            8209,
+            8256,
+            6059,
+            8259,
+            8271,
+            8365,
+            4385
+        ],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 1,
+        "ShopDisplay": 1
+    },
+    "5": {
+        "ID": [
+            8,
+            0,
+            0
+        ],
+        "OfferTitle": "daily",
+        "Cost": 129,
+        "OldCost": 0,
+        "Multiplier": [
+            36,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            12,
+            0,
+            0
+        ],
+        "SkinID": [
+            0,
+            0,
+            0
+        ],
+        "WhoBuyed": [
+            8009,
+            5977,
+            977,
+            5392,
+            6648,
+            7024,
+            4496,
+            7235,
+            5971,
+            7463,
+            6953,
+            7841,
+            5916,
+            7645,
+            6586,
+            8169,
+            7719,
+            7832,
+            6914,
+            7955,
+            8191,
+            6237,
+            8226,
+            7877,
+            5729,
+            5905,
+            8255,
+            8091,
+            8319,
+            7835,
+            8033,
+            8371
+        ],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 1,
+        "ShopDisplay": 1
+    },
+    "6": {
+        "ID": [
+            4,
+            0,
+            0
+        ],
+        "OfferTitle": "DAILY SKIN",
+        "Cost": 173,
+        "OldCost": 0,
+        "Multiplier": [
+            0,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            0,
+            0,
+            0
+        ],
+        "SkinID": [
+            122,
+            0,
+            0
+        ],
+        "WhoBuyed": [],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 0,
+        "ShopDisplay": 0
+    },
+    "7": {
+        "ID": [
+            4,
+            0,
+            0
+        ],
+        "OfferTitle": "DAILY SKIN",
+        "Cost": 189,
+        "OldCost": 0,
+        "Multiplier": [
+            0,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            0,
+            0,
+            0
+        ],
+        "SkinID": [
+            100,
+            0,
+            0
+        ],
+        "WhoBuyed": [
+            7956,
+            5273
+        ],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 0,
+        "ShopDisplay": 0
+    },
+    "8": {
+        "ID": [
+            4,
+            0,
+            0
+        ],
+        "OfferTitle": "DAILY SKIN",
+        "Cost": 60,
+        "OldCost": 0,
+        "Multiplier": [
+            0,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            0,
+            0,
+            0
+        ],
+        "SkinID": [
+            195,
+            0,
+            0
+        ],
+        "WhoBuyed": [
+            5870,
+            5378
+        ],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 0,
+        "ShopDisplay": 0
+    },
+    "9": {
+        "ID": [
+            4,
+            0,
+            0
+        ],
+        "OfferTitle": "DAILY SKIN",
+        "Cost": 189,
+        "OldCost": 0,
+        "Multiplier": [
+            0,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            0,
+            0,
+            0
+        ],
+        "SkinID": [
+            183,
+            0,
+            0
+        ],
+        "WhoBuyed": [],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 0,
+        "ShopDisplay": 0
+    },
+    "10": {
+        "ID": [
+            4,
+            0,
+            0
+        ],
+        "OfferTitle": "DAILY SKIN",
+        "Cost": 105,
+        "OldCost": 0,
+        "Multiplier": [
+            0,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            0,
+            0,
+            0
+        ],
+        "SkinID": [
+            158,
+            0,
+            0
+        ],
+        "WhoBuyed": [],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 0,
+        "ShopDisplay": 0
+    },
+    "11": {
+        "ID": [
+            4,
+            0,
+            0
+        ],
+        "OfferTitle": "DAILY SKIN",
+        "Cost": 42,
+        "OldCost": 0,
+        "Multiplier": [
+            0,
+            0,
+            0
+        ],
+        "BrawlerID": [
+            0,
+            0,
+            0
+        ],
+        "SkinID": [
+            123,
+            0,
+            0
+        ],
+        "WhoBuyed": [
+            166,
+            7024,
+            8138,
+            7484,
+            5273,
+            6059
+        ],
+        "Timer": 86400,
+        "OfferBGR": "offer_gems",
+        "ShopType": 0,
+        "ShopDisplay": 0
+    }
+}
